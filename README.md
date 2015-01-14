@@ -1,7 +1,7 @@
 jQuery Chaos Fontsize Selector
 ==============================
 
-A Fontsize selector to allow more accessible website content.
+A Fontsize selector to allow more accessible website content. The goal of this plugin as opposed to other solutions is to create a drop in solution for a Text Size selector without having to make CSS changes and adaptations to existing sites designs. Minor sizing changes will always be necessary, like using min-width or min-height instead of width and height in certain designs, but this plugin should handle the most common issues, like absolute font-sizes and line-heights.
 
 Example Usage
 -------------
