@@ -37,6 +37,7 @@ Features
 * Handles percentage resizing of font-size.
 * Fixes line-height to non-unit values for better CSS compatibility.
 * Hyphenates included children that overflow their width.
+* Uses "M" height font-size calculation.
 
 Options
 -------
