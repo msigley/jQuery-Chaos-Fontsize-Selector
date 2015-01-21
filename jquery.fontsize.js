@@ -1,7 +1,7 @@
 /*
  * jQuery Chaos Fontsize Selector
  * By Matthew Sigley
- * Version 1.0.1
+ * Version 1.0.2
  */
 
 (function( $ ) {
@@ -120,6 +120,8 @@
 			thisElement.css('line-height', ( (parseInt(lineheight, 10)) / fontSize ));
 		}
 		thisElement.data('fixed-line-height', true);
+		
+		return this;
 	};
 	
 	$.fn.hyphenateWords = function(hyphenate) {
@@ -135,6 +137,8 @@
 				'word-break': 'normal'
 			});
 		}
+		
+		return this;
 	};
 	
 	function notEmpty(value) {
