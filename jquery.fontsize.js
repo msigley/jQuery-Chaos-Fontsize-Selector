@@ -1,7 +1,7 @@
 /*
  * jQuery Chaos Fontsize Selector
  * By Matthew Sigley
- * Version 1.0.2
+ * Version 1.1.0
  */
 
 (function( $ ) {
@@ -149,8 +149,7 @@
 })( jQuery );
 
 if (!String.prototype.endsWith) {
-  Object.defineProperty(String.prototype, 'endsWith', {
-    value: function(searchString, position) {
+  String.prototype.endsWith = function(searchString, position) {
       var subjectString = this.toString();
       if (position === undefined || position > subjectString.length) {
         position = subjectString.length;
@@ -158,8 +157,16 @@ if (!String.prototype.endsWith) {
       position -= searchString.length;
       var lastIndex = subjectString.indexOf(searchString, position);
       return lastIndex !== -1 && lastIndex === position;
-    }
-  });
+  };
+}
+if (!String.prototype.trim) {
+  (function() {
+    // Make sure we trim BOM and NBSP
+    var rtrim = /^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g;
+    String.prototype.trim = function() {
+      return this.replace(rtrim, '');
+    };
+  })();
 }
 
 jQuery(document).ready(function($) {
