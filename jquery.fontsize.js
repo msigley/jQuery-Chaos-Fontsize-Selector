@@ -1,7 +1,7 @@
 /*
  * jQuery Chaos Fontsize Selector
  * By Matthew Sigley
- * Version 1.1.0
+ * Version 1.1.1
  */
 
 (function( $ ) {
@@ -15,7 +15,7 @@
 				includeChildren: ['h1', 'h2', 'h3', 'h4', 'h5'] },
 			options = $.extend({}, defaults, options);
 		
-		if( $.isEmptyObject( options.fontSizes ) )
+		if( $.isEmptyObject( options.fontSizes ) || !options.menuContainer.length )
 			return this;
 			
 		var currentFontsize = thisElement.getFontsize();
